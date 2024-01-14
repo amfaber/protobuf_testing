@@ -1,0 +1,29 @@
+Field present in serialized data, not in deserializers schema
+	Betterproto
+		Protobuf
+			Silently ignored
+		Json
+			-||-
+
+	Prost
+		Protobuf
+			Silently ignored
+		Json
+			Ignored if compiled with "ignore_unknown_fields" in pbjson::Builder()
+			Else, throws error "unknown field"
+		
+
+Field present in deserializers schema, not in data
+	Betterproto
+		Protobuf
+			Field auto initialized to default value - 0 for int, "" for string
+		Json
+			-||-
+	
+	
+	Prost
+		Protobuf
+			Field auto initialized to default value - 0 for int, "" for string
+		Json
+			-||-
+			
